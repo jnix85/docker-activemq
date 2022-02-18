@@ -11,6 +11,7 @@ on:
 jobs:
   build_container_images:
     runs-on: ubuntu-20.04
+    environment: dockerhub
     steps:
       - uses: actions/checkout@v2
       - name: Prepare Build OS
@@ -36,6 +37,7 @@ jobs:
           done
   build_alpine_container_images:
     runs-on: ubuntu-20.04
+    environment: dockerhub
     steps:
       - uses: actions/checkout@v2
       - name: Prepare Build OS
